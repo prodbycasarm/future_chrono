@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 90vw;
+}
+
+.line {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 4vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #0048ff 100%);
+    animation: drop 3s 0s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    filter: blur(10px); 
+    box-shadow: 1px 1px 5px 5px #cfe2ff; /*glowing effect */
+
+  }
+
+  &:nth-child(1) {
+    margin-left: -20%;
+    &::after {
+      animation-delay: 1s;
+    }
+  }
+
+  &:nth-child(2) {
+    margin-left: -10%;
+    &::after {
+      animation-delay: 1.5s;
+    }
+  }
+
+  &:nth-child(3) {
+    margin-left: 20%;
+    &::after {
+      animation-delay: 2s;
+    }
+  }
+
+  &:nth-child(4) {
+    margin-left: 10%;
+    &::after {
+      animation-delay: 2.5s;
+    }
+  }
+
+  // Add more lines here
+  &:nth-child(5) {
+    margin-left: -30%;
+    &::after {
+      animation-delay: 3s;
+    }
+  }
+
+  &:nth-child(6) {
+    margin-left: 30%;
+    &::after {
+      animation-delay: 3.5s;
+    }
+  }
+
+  &:nth-child(7) {
+    margin-left: -40%;
+    &::after {
+      animation-delay: 4s;
+    }
+  }
+  
+  &:nth-child(8) {
+    margin-left: -50%;
+    &::after {
+      animation-delay: 4.5s;
+    }
+  }
+  
+  &:nth-child(9) {
+    margin-left: 40%;
+    &::after {
+      animation-delay: 5s;
+    }
+  }
+  
+  &:nth-child(10) {
+    margin-left: 50%;
+    &::after {
+      animation-delay: 5.5s;
+    }
+  }
+  
+  &:nth-child(11) {
+    margin-left: -60%;
+    &::after {
+      animation-delay: 6s;
+    }
+  }
+  
+  &:nth-child(12) {
+    margin-left: 60%;
+    &::after {
+      animation-delay: 6.5s;
+    }
+  }
+
+  &:nth-child(13) {
+    margin-left: 0%;
+    &::after {
+      animation-delay: 7s;
+    }
+  }
+  
+  &:nth-child(14) {
+    margin-left: 3%;
+    &::after {
+      animation-delay: 7.5s;
+    }
+  }
+  
+  &:nth-child(15) {
+    margin-left: 15%;
+    &::after {
+      animation-delay: 8s;
+    }
+  }
+  
+  &:nth-child(16) {
+    margin-left: -15%;
+    &::after {
+      animation-delay: 8.5s;
+    }
+  }
+  
+  &:nth-child(17) {
+    margin-left: 65%;
+    &::after {
+      animation-delay: 9s;
+    }
+  }
+  
+  // Add more lines here
+  &:nth-child(18) {
+    margin-left: -63%;
+    &::after {
+      animation-delay: 9.5s;
+    }
+  }
+  
+  &:nth-child(19) {
+    margin-left: 19%;
+    &::after {
+      animation-delay: 10s;
+    }
+  }
+  
+  &:nth-child(20) {
+    margin-left: 95%;
+    &::after {
+      animation-delay: 10.5s;
+    }
+  }
+  
+  &:nth-child(21) {
+    margin-left: -35%;
+    &::after {
+      animation-delay: 11s;
+    }
+  }
+  
+  &:nth-child(22) {
+    margin-left: -15%;
+    &::after {
+      animation-delay: 11.5s;
+    }
+  }
+  
+  
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}

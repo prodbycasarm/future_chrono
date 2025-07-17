@@ -1,0 +1,273 @@
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+body {
+    position: static;
+    width: 100%;
+    min-height: 100vh; 
+    background-image: linear-gradient(to right, #020973 0%, #000000 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+
+/* Basic styles for .boite */
+.boite {
+    position: relative; /* Keep it relative */
+    background:  rgba(169, 169, 169, 0.358);
+    width: 50%;
+    max-width: 1900px;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 20px;
+    transition: width 500ms ease;
+    margin: 50px auto;
+}
+
+.boite h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+	
+	text-transform: uppercase;
+}
+
+.boite .datetime-picker{
+	position: relative;
+	display: flex;
+	align-items: center;
+	
+}
+.boite .datetime-picker input{
+	margin: 0 10px;
+	border: 0;
+	padding: 0.5rem;
+	border-radius: 10px;
+	transition: box-shadow 1000ms ease;
+	
+}
+.boite .datetime-picker input:focus{
+	outline: none;
+	box-shadow: 0 0 10px #292929;
+	
+}
+.boite .datetime-picker span{
+	display: inline-block;
+	text-transform: uppercase;
+}
+.boite .datetime-picker span#dateChoisi{
+	margin-left: auto;
+	
+}
+.cal-age{
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 0;
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: max-height 2s, opacity 3s, margin 250ms ease;	
+}
+.cal-age.expand{
+	
+	margin-top: 30px;
+	max-height: none;
+	opacity: 1;
+}
+.cal-age .boite-age{
+	position: relative;
+	background: rgba(255, 255, 255, 0.90);
+	border-radius: 10px;
+	margin:10px;
+	width: 600px;
+	transition: 500ms ease;
+	
+}
+.cal-age .boite-age p.header{
+	position: relative;
+	text-align: center;
+	color:#FFF;
+	background: #4400ff;
+	padding: 10px 30px;
+	border-radius: 10px 10px 0 0;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	
+}
+.cal-age .boite-age:nth-child(even) p.header{
+	background:#000081
+}
+.cal-age .boite-age .value{
+	text-align: center;
+	padding: 30px 20px;
+	font-size: 1.5rem;
+	transition: 500ms ease;
+}
+
+.animated-gradient1 {
+    background: linear-gradient(45deg, rgb(3, 4, 91), rgb(19, 2, 82), rgba(29, 6, 120, 0.737), rgba(26, 5, 149, 0.943));
+    background-size: 500% 500%; /* Increase the size for better animation effect */
+    animation: gradientAnimation1 15s ease infinite;
+}
+
+@keyframes gradientAnimation1 {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+/* Media Queries */
+
+@media (max-height: 1100px) {
+
+	.cal-age.expand{
+		position: relative;
+		height: 400px;
+		overflow-y: scroll;
+	}
+}
+@media (max-height: 600px) {
+
+    
+	.cal-age.expand{
+		position: relative;
+		height: 200px;
+		overflow-y: scroll;
+	}
+}
+@media (max-width: 3840px) {
+
+    .boite {
+        width: 1500px;
+    }
+	.boite .datetime-picker input {
+        width: 54%;
+    }
+
+    .cal-age .boite-age {
+        width: 455px;
+    }
+}
+
+@media (max-width: 1900px) {
+    .boite {
+        width: 1200px;
+    }
+
+    .boite .datetime-picker input {
+        width: 54%;
+    }
+
+    .cal-age .boite-age {
+        width: 350px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .boite {
+        width: 90%; /* Adjusted for better adaptability */
+        margin: 0 auto; /* Center align on smaller screens */
+    }
+
+    .boite .datetime-picker input {
+        width: 55%;
+		display: block;
+    }
+
+    .cal-age .boite-age {
+        width: 90%; /* Adjusted for better adaptability */
+        margin: 15px auto; /* Center align on smaller screens */
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .boite {
+        width: 90%; /* Adjusted for better adaptability */
+        margin: 0 auto; /* Center align on smaller screens */
+    }
+
+    .boite .datetime-picker input {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .boite .datetime-picker {
+        font-size: 1rem !important;
+        display: block;
+    }
+	span {
+        font-size: 0.8rem !important;
+        text-align: center;
+    }
+
+    .cal-age .boite-age {
+        width: 90%; /* Adjusted for better adaptability */
+        margin: 15px auto; /* Center align on smaller screens */
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+	
+    h4 {
+        font-size: 1.2rem !important;
+    }
+
+    .boite {
+        width: 90%; /* Adjusted for better adaptability */
+        margin: 0 auto; /* Center align on smaller screens */
+		overflow: auto;
+    }
+
+    .boite .datetime-picker {
+        font-size: 1rem !important;
+        display: block;
+    }
+
+    span {
+        font-size: 0.8rem !important;
+        text-align: center;
+    }
+
+    .boite .datetime-picker input {
+        width: 100%;
+        margin: 10px 0;
+        font-size: 1rem !important;
+    }
+
+    .cal-age .boite-age {
+        width: 90%; /* Adjusted for better adaptability */
+        
+    }
+
+    .cal-age .boite-age p.header {
+        padding: 10px 5px;
+        font-size: 0.8rem;
+    }
+
+    .cal-age .boite-age .value {
+        padding: 30px 5px;
+        font-size: 1rem;
+    }
+}
+
+/*background*/
+
+
