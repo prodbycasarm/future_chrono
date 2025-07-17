@@ -1,5 +1,5 @@
 
-  <h1>🧮 Age Calculator V3</h1>
+  <h1>🧮 Age Calculator (futurechrono)</h1>
   <p>
     A sleek, responsive, and animated age calculator built using <strong>HTML, CSS, and JavaScript</strong>. 
     Enter your date of birth, and the app instantly calculates your exact age in years, months, days, hours, seconds, and milliseconds — all in real-time!
