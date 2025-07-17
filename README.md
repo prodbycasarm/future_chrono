@@ -9,7 +9,7 @@
   <p>
     Check out the live version here: 
     <a href="https://futurechrono.casarm.com/index.html" target="_blank">
-      https://your-username.github.io/age-calculator-v3
+      futurechrono
     </a>
     <br><small>(Replace the link above with your actual GitHub Pages URL.)</small>
   </p>
